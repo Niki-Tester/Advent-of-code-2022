@@ -1,7 +1,7 @@
 const fs = require('fs');
 const readline = require('readline');
 
-async function readFileByLine() {
+async function readPuzzleInputByLine() {
   const fileStream = fs.createReadStream('../puzzle-input.txt');
 
   const rl = readline.createInterface({
@@ -46,7 +46,7 @@ async function readFileByLine() {
   console.log(score);
 }
 
-readFileByLine();
+readPuzzleInputByLine();
 
 // Rock     - A / X 1 Point
 // Paper    - B / Y 2 Points

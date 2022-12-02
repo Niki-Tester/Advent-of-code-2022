@@ -1,7 +1,7 @@
 const fs = require('fs');
 const readline = require('readline');
 
-async function readFileByLine() {
+async function readPuzzleInputByLine() {
   const fileStream = fs.createReadStream('../puzzle-input.txt');
 
   const rl = readline.createInterface({
@@ -23,7 +23,7 @@ async function readFileByLine() {
 }
 
 async function getTopThreeElvesCalories() {
-  const elves = await readFileByLine();
+  const elves = await readPuzzleInputByLine();
   totalCaloriesPerElf = [];
   elves.forEach((elf) => {
     totalCaloriesPerElf.push(elf.reduce((a, b) => a + b, 0));
